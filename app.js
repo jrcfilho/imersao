@@ -47,7 +47,17 @@ campoPesquisa = campoPesquisa.toLowerCase()
         section.innerHTML = "<p>Nada foi encontrado. Faça uma nova Busca, Obrigado!</p>"
     return
     }
+    
 
     // Atribui o HTML gerado à seção dos resultados
     section.innerHTML = resultados;
+    
+
+    
 }
+
+document.getElementById("campo-pesquisa").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        pesquisar();
+    }
+});
